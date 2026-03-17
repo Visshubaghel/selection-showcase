@@ -2,15 +2,18 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       colors: {
@@ -57,6 +60,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Selection brand tokens
+        ivory: "hsl(var(--ivory))",
+        charcoal: "hsl(var(--charcoal))",
+        champagne: "hsl(var(--champagne))",
+        "champagne-light": "hsl(var(--champagne-light))",
+        "soft-black": "hsl(var(--soft-black))",
+      },
+      fontFamily: {
+        display: ["Playfair Display", "Georgia", "serif"],
+        body: ["Inter", "-apple-system", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +78,48 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(24px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-in-left": {
+          from: { opacity: "0", transform: "translateX(-40px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "slide-in-right": {
+          from: { opacity: "0", transform: "translateX(40px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "kenBurns": {
+          from: { transform: "scale(1) translateY(0)" },
+          to: { transform: "scale(1.08) translateY(-1%)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.9s cubic-bezier(0.16,1,0.3,1) forwards",
+        "fade-in": "fade-in 0.9s ease forwards",
+        "slide-in-left": "slide-in-left 0.9s cubic-bezier(0.16,1,0.3,1) forwards",
+        "slide-in-right": "slide-in-right 0.9s cubic-bezier(0.16,1,0.3,1) forwards",
+        "ken-burns": "kenBurns 12s ease-in-out forwards",
+      },
+      transitionTimingFunction: {
+        luxury: "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      transitionDuration: {
+        "900": "900ms",
       },
     },
   },
