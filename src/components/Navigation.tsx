@@ -70,9 +70,11 @@ export default function Navigation() {
             >
               The House
             </Link>
-          <Link
-              to="/the-house#contact"
-              className={`nav-link ${scrolled || !isHome ? "text-charcoal" : "text-ivory"}`}
+            <Link
+              to="/contact"
+              className={`nav-link ${scrolled || !isHome ? "text-charcoal" : "text-ivory"} ${
+                location.pathname === "/contact" ? "active" : ""
+              }`}
             >
               Contact
             </Link>
