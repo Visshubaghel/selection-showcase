@@ -106,7 +106,7 @@ function HeritageSection() {
             He opened a small atelier on Avenue Montaigne with three tailors and a bolt of the finest English worsted wool. Within five years, the waiting list for a Selection suit stretched to fourteen months.
           </p>
           <p className="body-elegant text-muted-foreground mb-10 leading-[2]">
-            Today, Selection operates six ateliers across four continents, yet every piece is still finished by hand — still governed by the same uncompromising standards that Édouard set in that first, modest salon.
+            Today, Selection has found its home in India — bringing the same uncompromising standards and hand-finished mastery that Édouard set in that first, modest salon to a new generation of discerning patrons.
           </p>
           <a href="#contact" className="btn-editorial">
             Inquire about bespoke →
