@@ -31,11 +31,8 @@ export default function TheHouse() {
       {/* Craft section */}
       <CraftSection />
 
-      {/* Boutiques */}
-      <BoutiquesSection />
-
-      {/* Contact form */}
-      <ContactSection />
+      {/* Craftsmanship & Heritage */}
+      <CraftsmanshipSection />
 
       <Footer />
     </div>
