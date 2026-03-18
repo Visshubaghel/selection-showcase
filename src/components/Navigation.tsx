@@ -112,7 +112,7 @@ export default function Navigation() {
             >
               {link.label}
             </Link>
-          )}
+          ))}
           <div className="divider-gold w-16 mt-4" />
         </div>
       )}
