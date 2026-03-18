@@ -11,19 +11,10 @@ export default function TheHouse() {
   return (
     <div className="bg-ivory min-h-screen">
       <Navigation />
-
-      {/* Hero */}
       <HouseHero />
-
-      {/* Heritage story */}
       <HeritageSection />
-
-      {/* Craft section */}
       <CraftSection />
-
-      {/* Craftsmanship & Heritage */}
       <CraftsmanshipSection />
-
       <Footer />
     </div>
   );
@@ -59,7 +50,6 @@ function HeritageSection() {
   return (
     <section className="py-28 px-6">
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
-        {/* Image */}
         <div
           ref={left.ref as React.RefObject<HTMLDivElement>}
           className={`fade-up ${left.inView ? "visible" : ""}`}
@@ -73,7 +63,6 @@ function HeritageSection() {
           </div>
         </div>
 
-        {/* Text */}
         <div
           ref={right.ref as React.RefObject<HTMLDivElement>}
           className={`fade-up ${right.inView ? "visible" : ""}`}
@@ -94,7 +83,7 @@ function HeritageSection() {
           <p className="body-elegant text-muted-foreground mb-10 leading-[2]">
             Today, Selection has found its home in India — bringing the same uncompromising standards and hand-finished mastery that Édouard set in that first, modest salon to a new generation of discerning patrons.
           </p>
-          <a href="#contact" className="btn-editorial">
+          <a href="/contact" className="btn-editorial">
             Inquire about bespoke →
           </a>
         </div>
@@ -127,7 +116,6 @@ function CraftSection() {
   return (
     <section className="py-28 px-6 bg-charcoal">
       <div className="max-w-screen-xl mx-auto">
-        {/* Header */}
         <div
           ref={ref as React.RefObject<HTMLDivElement>}
           className={`grid md:grid-cols-2 gap-12 items-end mb-20 fade-up ${inView ? "visible" : ""}`}
@@ -151,7 +139,6 @@ function CraftSection() {
           </div>
         </div>
 
-        {/* Pillars */}
         <div className="grid md:grid-cols-3 gap-8 border-t border-ivory/10 pt-16">
           {pillars.map((pillar, i) => (
             <CraftPillar key={pillar.number} pillar={pillar} delay={i * 120} />
@@ -221,146 +208,6 @@ function CraftsmanshipSection() {
             This is the promise of Selection: garments that transcend seasons, that age with grace, and that honour the timeless art of dressing well.
           </p>
         </div>
-      </div>
-    </section>
-  );
-}
-  return (
-    <section className="py-28 px-6">
-      <div className="max-w-screen-xl mx-auto">
-        <div
-          ref={ref as React.RefObject<HTMLDivElement>}
-          className={`text-center mb-16 fade-up ${inView ? "visible" : ""}`}
-        >
-          <p className="label-spaced text-champagne mb-4">Find a Boutique</p>
-          <div className="divider-gold w-12 mx-auto mb-6" />
-          <h2 className="display-lg font-display text-charcoal">
-            Our Global<br />
-            <span className="italic">Maisons</span>
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {boutiques.map((b, i) => (
-            <BoutiqueCard key={b.city} boutique={b} delay={i * 100} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function BoutiqueCard({ boutique, delay }: { boutique: typeof boutiques[0]; delay: number }) {
-  const { ref, inView } = useInView();
-  return (
-    <div
-      ref={ref as React.RefObject<HTMLDivElement>}
-      className={`fade-up ${inView ? "visible" : ""} border border-[hsl(var(--divider))] p-8 hover:border-champagne transition-colors duration-500 group`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      <div className="flex items-start justify-between mb-4">
-        <h3 className="font-display text-charcoal text-xl group-hover:italic transition-all duration-300">
-          {boutique.city}
-        </h3>
-        <MapPin size={14} className="text-champagne mt-1 shrink-0" />
-      </div>
-      <div className="divider-gold w-8 mb-5" />
-      <p className="font-body text-sm text-muted-foreground font-light mb-5 leading-relaxed italic">
-        "{boutique.description}"
-      </p>
-      <div className="space-y-2 text-sm">
-        <div className="flex items-start gap-2 text-charcoal/70">
-          <MapPin size={12} className="mt-0.5 shrink-0 text-champagne" />
-          <span className="font-body font-light">{boutique.address}</span>
-        </div>
-        <div className="flex items-center gap-2 text-charcoal/70">
-          <Phone size={12} className="shrink-0 text-champagne" />
-          <span className="font-body font-light">{boutique.phone}</span>
-        </div>
-        <div className="flex items-center gap-2 text-charcoal/70">
-          <Clock size={12} className="shrink-0 text-champagne" />
-          <span className="font-body font-light">{boutique.hours}</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ContactSection() {
-  const { ref, inView } = useInView();
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-  };
-
-  return (
-    <section id="contact" className="py-28 px-6 bg-secondary">
-      <div
-        ref={ref as React.RefObject<HTMLDivElement>}
-        className={`max-w-2xl mx-auto fade-up ${inView ? "visible" : ""}`}
-      >
-        <div className="text-center mb-14">
-          <p className="label-spaced text-champagne mb-4">Contact</p>
-          <div className="divider-gold w-12 mx-auto mb-6" />
-          <h2 className="display-lg font-display text-charcoal">
-            Begin a<br />
-            <span className="italic">Conversation</span>
-          </h2>
-          <p className="body-elegant text-muted-foreground mt-4">
-            For bespoke commissions, press inquiries, or boutique appointments.
-          </p>
-        </div>
-
-        {sent ? (
-          <div className="text-center py-16 border border-champagne">
-            <p className="label-spaced text-champagne mb-4">Message Received</p>
-            <h3 className="display-sm font-display italic text-charcoal">
-              We will be in touch shortly.
-            </h3>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-0">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
-              <input
-                type="text"
-                placeholder="Your Name"
-                required
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="bg-transparent border border-[hsl(var(--divider))] px-5 py-4 font-body text-sm font-light placeholder:text-muted-foreground focus:outline-none focus:border-champagne transition-colors duration-300"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                required
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="bg-transparent border border-[hsl(var(--divider))] border-l-0 sm:border-l-0 px-5 py-4 font-body text-sm font-light placeholder:text-muted-foreground focus:outline-none focus:border-champagne transition-colors duration-300"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              value={form.subject}
-              onChange={(e) => setForm({ ...form, subject: e.target.value })}
-              className="w-full bg-transparent border border-[hsl(var(--divider))] border-t-0 px-5 py-4 font-body text-sm font-light placeholder:text-muted-foreground focus:outline-none focus:border-champagne transition-colors duration-300"
-            />
-            <textarea
-              rows={6}
-              placeholder="Your message…"
-              required
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full bg-transparent border border-[hsl(var(--divider))] border-t-0 px-5 py-4 font-body text-sm font-light placeholder:text-muted-foreground focus:outline-none focus:border-champagne transition-colors duration-300 resize-none"
-            />
-            <button type="submit" className="btn-editorial w-full justify-center border-t-0 py-5">
-              Send Message →
-            </button>
-          </form>
-        )}
       </div>
     </section>
   );
