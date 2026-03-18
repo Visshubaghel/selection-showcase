@@ -7,16 +7,6 @@ import heritageCraft from "@/assets/heritage-craft.jpg";
 import heroMen from "@/assets/hero-men.jpg";
 import craftsmanshipHeritage from "@/assets/craftsmanship-heritage.jpg";
 
-const boutiques = [
-  {
-    city: "Mumbai",
-    address: "Jio World Drive, Level 2, Bandra Kurla Complex, Mumbai 400051, India",
-    phone: "+91 22 6173 9000",
-    hours: "Mon – Sun, 11:00 – 21:00",
-    description: "Our singular Indian maison. An intimate sanctuary of curated style nestled in the heart of Mumbai's most discerning address, offering bespoke consultations by appointment.",
-  },
-];
-
 export default function TheHouse() {
   return (
     <div className="bg-ivory min-h-screen">
