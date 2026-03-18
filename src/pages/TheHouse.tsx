@@ -10,32 +10,11 @@ import heroMen from "@/assets/hero-men.jpg";
 
 const boutiques = [
   {
-    city: "Paris",
-    address: "24 Avenue Montaigne, 75008 Paris, France",
-    phone: "+33 1 47 23 56 78",
-    hours: "Mon – Sat, 10:00 – 19:00",
-    description: "Our maison principale. The original atelier, housed in a 19th-century Haussmann building overlooking Avenue Montaigne.",
-  },
-  {
-    city: "Milan",
-    address: "Via della Spiga, 7, 20121 Milano MI, Italy",
-    phone: "+39 02 7600 1234",
-    hours: "Mon – Sat, 10:00 – 19:30",
-    description: "A sanctuary of Italian craftsmanship in the heart of the Quadrilatero della Moda. Appointments available for bespoke consultations.",
-  },
-  {
-    city: "New York",
-    address: "745 Fifth Avenue, New York, NY 10151",
-    phone: "+1 212 446 7890",
-    hours: "Mon – Sat, 10:00 – 20:00 · Sun, 12:00 – 18:00",
-    description: "Our American flagship on Fifth Avenue, spanning three floors of editorial displays and a private trunk show salon on the upper level.",
-  },
-  {
-    city: "Dubai",
-    address: "The Dubai Mall, Level 1, Fashion Avenue, Dubai, UAE",
-    phone: "+971 4 339 8800",
-    hours: "Sun – Thu, 10:00 – 22:00 · Fri – Sat, 10:00 – 23:00",
-    description: "A desert jewel. A curated experience in the world's most visited shopping destination, featuring our full RTW and couture lines.",
+    city: "Mumbai",
+    address: "Jio World Drive, Level 2, Bandra Kurla Complex, Mumbai 400051, India",
+    phone: "+91 22 6173 9000",
+    hours: "Mon – Sun, 11:00 – 21:00",
+    description: "Our singular Indian maison. An intimate sanctuary of curated style nestled in the heart of Mumbai's most discerning address, offering bespoke consultations by appointment.",
   },
 ];
 
@@ -127,7 +106,7 @@ function HeritageSection() {
             He opened a small atelier on Avenue Montaigne with three tailors and a bolt of the finest English worsted wool. Within five years, the waiting list for a Selection suit stretched to fourteen months.
           </p>
           <p className="body-elegant text-muted-foreground mb-10 leading-[2]">
-            Today, Selection operates six ateliers across four continents, yet every piece is still finished by hand — still governed by the same uncompromising standards that Édouard set in that first, modest salon.
+            Today, Selection has found its home in India — bringing the same uncompromising standards and hand-finished mastery that Édouard set in that first, modest salon to a new generation of discerning patrons.
           </p>
           <a href="#contact" className="btn-editorial">
             Inquire about bespoke →
