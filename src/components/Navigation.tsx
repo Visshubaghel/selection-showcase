@@ -103,6 +103,7 @@ export default function Navigation() {
             { to: "/", label: "Home" },
             { to: "/collections", label: "Collections" },
             { to: "/the-house", label: "The House" },
+            { to: "/contact", label: "Contact" },
           ].map((link) => (
             <Link
               key={link.to}
@@ -111,14 +112,7 @@ export default function Navigation() {
             >
               {link.label}
             </Link>
-          ))}
-          <div className="divider-gold w-16 mt-4" />
-          <a
-            href="mailto:inquiries@selection.com"
-            className="label-spaced text-champagne mt-2"
-          >
-            Contact Us
-          </a>
+          ))
         </div>
       )}
     </>
