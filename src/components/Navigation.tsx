@@ -70,9 +70,11 @@ export default function Navigation() {
             >
               The House
             </Link>
-          <Link
-              to="/the-house#contact"
-              className={`nav-link ${scrolled || !isHome ? "text-charcoal" : "text-ivory"}`}
+            <Link
+              to="/contact"
+              className={`nav-link ${scrolled || !isHome ? "text-charcoal" : "text-ivory"} ${
+                location.pathname === "/contact" ? "active" : ""
+              }`}
             >
               Contact
             </Link>
@@ -101,6 +103,7 @@ export default function Navigation() {
             { to: "/", label: "Home" },
             { to: "/collections", label: "Collections" },
             { to: "/the-house", label: "The House" },
+            { to: "/contact", label: "Contact" },
           ].map((link) => (
             <Link
               key={link.to}
@@ -111,12 +114,6 @@ export default function Navigation() {
             </Link>
           ))}
           <div className="divider-gold w-16 mt-4" />
-          <a
-            href="mailto:inquiries@selection.com"
-            className="label-spaced text-champagne mt-2"
-          >
-            Contact Us
-          </a>
         </div>
       )}
     </>
