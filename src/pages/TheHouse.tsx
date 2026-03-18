@@ -1,12 +1,11 @@
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useInView } from "@/hooks/useInView";
-import { MapPin, Phone, Clock } from "lucide-react";
 
 import heritageAtelier from "@/assets/heritage-atelier.jpg";
 import heritageCraft from "@/assets/heritage-craft.jpg";
 import heroMen from "@/assets/hero-men.jpg";
+import craftsmanshipHeritage from "@/assets/craftsmanship-heritage.jpg";
 
 const boutiques = [
   {
