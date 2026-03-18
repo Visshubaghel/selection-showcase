@@ -180,9 +180,51 @@ function CraftPillar({ pillar, delay }: { pillar: { number: string; title: strin
   );
 }
 
-function BoutiquesSection() {
-  const { ref, inView } = useInView();
+function CraftsmanshipSection() {
+  const left = useInView();
+  const right = useInView();
 
+  return (
+    <section className="py-28 px-6">
+      <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div
+          ref={left.ref as React.RefObject<HTMLDivElement>}
+          className={`fade-up ${left.inView ? "visible" : ""}`}
+        >
+          <div className="img-editorial aspect-[4/5] overflow-hidden">
+            <img
+              src={craftsmanshipHeritage}
+              alt="Craftsmanship and heritage"
+              className="w-full h-full object-cover transition-transform duration-[900ms] ease-luxury hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          ref={right.ref as React.RefObject<HTMLDivElement>}
+          className={`fade-up ${right.inView ? "visible" : ""}`}
+          style={{ transitionDelay: "150ms" }}
+        >
+          <p className="label-spaced text-champagne mb-6">Craftsmanship & Heritage</p>
+          <div className="divider-gold w-10 mb-8" />
+          <h2 className="display-lg font-display text-charcoal mb-8">
+            An unwavering devotion<br />
+            to <span className="italic">excellence</span>
+          </h2>
+          <p className="body-elegant text-muted-foreground mb-6 leading-[2]">
+            Every Selection garment begins with the world's most exceptional materials — Italian silks from the looms of Como, Scottish cashmere from the Borders, and the finest Egyptian cotton from the banks of the Nile. We accept nothing less than perfection at the source.
+          </p>
+          <p className="body-elegant text-muted-foreground mb-6 leading-[2]">
+            Our master tailors, each with decades of expertise, shape these fabrics through forty-eight stages of meticulous handwork. From the first cut to the final press, every stitch is placed with deliberate intention — ensuring that each piece carries the quiet confidence of true craftsmanship.
+          </p>
+          <p className="body-elegant text-muted-foreground leading-[2]">
+            This is the promise of Selection: garments that transcend seasons, that age with grace, and that honour the timeless art of dressing well.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
   return (
     <section className="py-28 px-6">
       <div className="max-w-screen-xl mx-auto">
