@@ -70,12 +70,12 @@ export default function Navigation() {
             >
               The House
             </Link>
-            <a
-              href="mailto:inquiries@selection.com"
+          <Link
+              to="/the-house#contact"
               className={`nav-link ${scrolled || !isHome ? "text-charcoal" : "text-ivory"}`}
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Mobile burger */}
